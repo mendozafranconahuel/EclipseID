@@ -3,9 +3,11 @@ import metodos.Metodo;
 
 public class CuentaBancaria {
 	//long contador = 100001, 
-	long numCuenta, dni;
+	long numCuenta;
+	protected long dni;
 	static int contador = 100001;
-	double saldo, interes;
+	protected double saldo;
+	protected double interes;
 //CONSTRUCTORES
 	public CuentaBancaria(){ //Por defecto
 		this.numCuenta = this.contador;
@@ -45,13 +47,13 @@ public class CuentaBancaria {
 		this.saldo += Metodo.redondear(monto, 2);
 		mostrarCuenta();
 	}
-////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////double tope
 
 	public void retirar(double extraer) {
 		if (this.saldo > 0){
 			//double extraer = pedir.pedirDouble("> INGRESE EL MONTO A EXTRAER: ");
 			extraer = Metodo.redondear(extraer, 2);
-			if (extraer <= this.saldo) {
+			if (extraer <= this.saldo ) {
 				this.saldo = this.saldo - extraer;
 				mostrarCuenta();
 			}

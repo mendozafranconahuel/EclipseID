@@ -14,4 +14,3 @@ public class Punto5 {
 		System.out.println("- AREA: "+Metodo.redondear(c.area(), 4)+"\n- PERIMETRO: "+Metodo.redondear(c.perimetro(),4));
 	}
 }
-	
