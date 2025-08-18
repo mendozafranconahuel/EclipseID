@@ -10,7 +10,7 @@ public class Cuadrilatero extends Forma {
 		this.L1 = L1;
 		this.L2 = L2;	
 	}
-// static static
+	
 	public double area() {
 		double calculo = L1 * L2; 
 		return calculo;
