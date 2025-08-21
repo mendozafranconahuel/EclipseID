@@ -1,7 +1,7 @@
 package punto1;
 
 public class Punto1 {
-	public static void main(String[]Arg) {
+	public static void main(String[] arg) {
 		CuentaBancaria cliente1 = new CuentaBancaria(41, 100000, 40);
 		CuentaBancaria cliente2 = new CuentaBancaria(42, 200000, 30);
 		CuentaBancaria cliente3 = new CuentaBancaria(43, 300000, 20);

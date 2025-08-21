@@ -2,7 +2,7 @@ package punto4;
 import metodos.Metodo;
 
 public class Punto4 {
-	public static void main (String [] Arg) {
+	public static void main (String [] arg) {
 		//Cuadrilatero c = new Cuadrilatero("uno",5,6);
 		Cuadrilatero c = null;
 		double l1 = 0, l2 = 0;
