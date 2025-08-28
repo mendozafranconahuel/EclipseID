@@ -87,7 +87,7 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 	 
 // -------------------------------------------------------------------------------------------------//
 
-	public void mostrar() { //CORREGIR EL PORQUE
+	public void mostrarSueldo() { //CORREGIR EL PORQUE
 		System.out.println("- DNI: "+dni);
 		System.out.println("- LEGAJO: "+legajo);
 		System.out.println("- INSTITUCION: "+institucion);
@@ -113,18 +113,19 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 	
 //transferir (monto, CBU): este método simulará una transferencia a otra cuenta por el monto ingresado (siempre y cuando haya saldo) y decrementará el saldo de la cuenta. Para la “transferencia”, muestre el saldo final de la cuenta.
 	
-	public void trasferirCBU(double monto,long cbu) {
+	public void trasferir(double monto,long cbu) {
 		monto = Metodo.redondear(monto, 2);
 		if(this.saldo >= monto || Metodo.validarLong(cbu) == 18) { //cambiar por 18
 			this.saldo = saldo - monto;
-			System.out.println("\n- SALDO ACTUAL:"+this.saldo);
+			System.out.println("\n - TRASFERENCIA HECHA DE: $"+monto+" A "+cbu);
+			System.out.println(" - SALDO ACTUAL:"+this.saldo);
 		}
-		else {System.out.println(" NO ES POSIBLE REALIZAR LA TRANSFERENCIA");}
+		else {System.out.println(" * NO ES POSIBLE REALIZAR LA TRANSFERENCIA");}
 	}
 
 //Sobrecargue el método transferir (monto, Alias) de la clase CuentaSueldo para que acepte un alias alfanumérico.
 	
-	public void trasferirAlias(double monto,String alias) {
+	public void trasferir(double monto,String alias) {
 		monto = Metodo.redondear(monto, 2);
 		if(this.saldo >= monto) {
 			this.saldo = saldo - monto;

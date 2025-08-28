@@ -1,21 +1,27 @@
 package punto6;
-public class Cuadrilatero implements Forma{
-	// Atributos -------------------------------------------------------------------------------------------
-	private double lado1 = 0;
-	private double lado2 = 0;
-	// Constructores -----------------------------------------------------------------------------------------
-	public Cuadrilatero() {}
-	public Cuadrilatero(double lado1, double lado2) {
-		this.lado1 = lado1;
-		this.lado2 = lado2;
-	}
-	// Metodos -----------------------------------------------------------------------------------------------
-	@Override
-	public double area() {
-		return lado1 * lado2;
-	}
-	@Override
-	public double perimetro() {
-		return 2 * (lado1 + lado2);
+
+import metodos.Metodo;
+import punto4.Cuadrilatero;
+
+public class Punto6 {
+	public static void main (String [] arg) {
+		//Cuadrilatero c = new Cuadrilatero("uno",5,6);
+		Cuadrilatero c = null;
+		double l1 = 0, l2 = 0;
+		
+		l1 = Metodo.dimencion("> LADO 1: ", 0);
+		l2 = Metodo.dimencion("> LADO 2: ", 0);
+
+		if (l1 > 0 || l2 >0 ) {
+			if(l1 == l2) {
+				c = new Cuadrilatero ("Cuadrado",l1,l2);
+			}
+			else{
+				c = new Cuadrilatero ("Resctangulo",l1,l2);	
+			}
+		}
+	System.out.println("\n\n- NOMBRE: "+c.nombreForma);
+	System.out.println("- AREA: "+c.area());
+	System.out.println("- PERIMETRO: "+c.perimetro());
 	}
 }

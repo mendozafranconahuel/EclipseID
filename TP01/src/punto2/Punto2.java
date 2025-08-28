@@ -34,7 +34,7 @@ public class Punto2 {
 			opcion = menu();
 			switch (opcion) {
 				case 1: System.out.println("\n - MOSTRAR CUENTA");
-						cliente.mostrarCuenta();
+						cliente.mostrarSueldo();
 					break;
 					
 				case 2: System.out.println("\n - EXTRAER DINERO DE LA CUENTA");
@@ -45,13 +45,13 @@ public class Punto2 {
 				case 3: System.out.println("\n - TRANSFERIR DINERO POR CBU");
 						double montoT = Metodo.pedirDouble(" > MONTO: ");
 						long cbuT = Metodo.pedirLong("> INGRESE CBU");
-							cliente.trasferirCBU(montoT, cbuT);
+							cliente.trasferir(montoT, cbuT);
 					break;
 					
 				case 4: System.out.println("\n - TRANSFERIR DINERO POR CBU");
 						double montoA = Metodo.pedirDouble(" > MONTO: ");
 						String alias = Metodo.cadena("> ALIAS: ");
-							cliente.trasferirAlias(montoA, alias);
+							cliente.trasferir(montoA, alias);
 					break;
 			}
 		}

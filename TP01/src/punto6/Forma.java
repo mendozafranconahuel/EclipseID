@@ -1,5 +1,6 @@
 package punto6;
-
-public class Forma {
-
+public interface Forma {
+	// Métodos ---------------------------------------------------------------------------------------------	
+	public abstract double area();
+	public abstract double perimetro();
 }
