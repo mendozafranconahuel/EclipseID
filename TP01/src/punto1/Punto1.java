@@ -18,8 +18,8 @@ public class Punto1 {
 	
 	public static void main(String[] arg) {
 		long dni = Metodo.pedirLong("> INGRESE DNI: ");
-		double sueldo = Metodo.pedirDouble("> INGRESE EL SUELDO: ");
-		double interes = Metodo.pedirDouble("> INGRESE EL INTERES: ");
+		double sueldo = Metodo.pedirDoublePositivo("> INGRESE EL SUELDO: ");
+		double interes = Metodo.pedirDoublePositivo("> INGRESE EL INTERES: ");
 			CuentaBancaria cliente = new CuentaBancaria(dni, sueldo, interes);
 
 		int opcion = 0;
@@ -33,11 +33,11 @@ public class Punto1 {
 						cliente.actulizarSaldo();
 					break;	
 				case 3: System.out.println("\n - INGRESAR MONTO A LA CUENTA");
-						double monto = Metodo.pedirDouble(" > MONTO: ");
+						double monto = Metodo.pedirDoublePositivo(" > MONTO: ");
 						cliente.ingresar(monto);
 					break;
 				case 4: System.out.println("\n - INGRESAR MONTO A RETIRAR DE LA CUENTA");
-						double retiro = Metodo.pedirDouble(" > MONTO: ");
+						double retiro = Metodo.pedirDoublePositivo(" > MONTO: ");
 						cliente.retirar(retiro);
 					break;
 			}

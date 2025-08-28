@@ -115,7 +115,7 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 	
 	public void trasferir(double monto,long cbu) {
 		monto = Metodo.redondear(monto, 2);
-		if(this.saldo >= monto || Metodo.validarLong(cbu) == 18) { //cambiar por 18
+		if(this.saldo >= monto && Metodo.validarLong(cbu) == 18) { //cambiar por 18
 			this.saldo = saldo - monto;
 			System.out.println("\n - TRASFERENCIA HECHA DE: $"+monto+" A "+cbu);
 			System.out.println(" - SALDO ACTUAL:"+this.saldo);
@@ -134,5 +134,4 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 		}
 		else {System.out.println(" NO ES POSIBLE REALIZAR LA TRANSFERENCIA");}
 	}
-// -------------------------------------------------------------------------------------------------//
 }//CuentaSueldo

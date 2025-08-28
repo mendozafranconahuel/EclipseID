@@ -19,13 +19,13 @@ public class Punto2 {
 		CuentaSueldo negocio = new CuentaSueldo(11111111, 0, 10,1,"Negocio","CuentaSueldo", 123456789987654321L, 15000);
 		
 		long dni = Metodo.pedirLong("> INGRESE DNI: ");
-		double saldo = Metodo.pedirDouble("> INGRESE EL SALDO: ");
-		double interes = Metodo.pedirDouble("> INGRESE EL INTERES: ");
+		double saldo = Metodo.pedirDoublePositivo("> INGRESE EL SALDO: ");
+		double interes = Metodo.pedirDoublePositivo("> INGRESE EL INTERES: ");
 		int legajo = Metodo.pedirEntero("> INGRESE LEGAJO: ");
 		String institucion = Metodo.cadena("> INGRESE INSTITUCION: ");
 		String beneficios = Metodo.cadena("> INGRESE BENEFICIOS: ");
 		long cbu = Metodo.pedirLong("> INGRESE CBU: ");
-		double tope = Metodo.pedirDouble("> INGRESE TOPE: ");
+		double tope = Metodo.pedirDoublePositivo("> INGRESE TOPE: ");
 
 		CuentaSueldo cliente = new CuentaSueldo(dni, saldo, interes,legajo,institucion,beneficios, cbu,tope);
 			

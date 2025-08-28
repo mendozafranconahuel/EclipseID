@@ -43,6 +43,21 @@ public class Metodo {
             }
         }
     }
+  //-------------------------------------------------------------------------------------------
+
+    public static double pedirDoublePositivo(String mensaje) {
+    double numero;
+    	while (true) {
+            numero = pedirDouble(mensaje);
+            try {
+                if (numero>0.01) {
+                	   return numero;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println(" - ERROR: Ingrese un número con decimales válido.");
+            }
+        }
+   }
 //----------------------------------------------------------------------------------------------------
     public static float pedirFloat(String mensaje) {
         while (true) {
