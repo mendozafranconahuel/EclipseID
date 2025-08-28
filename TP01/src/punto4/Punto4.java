@@ -21,5 +21,5 @@ public class Punto4 {
 	System.out.println("\n\n- NOMBRE: "+c.nombreForma);
 	System.out.println("- AREA: "+c.area());
 	System.out.println("- PERIMETRO: "+c.perimetro());
-	}//Main
+	}
 }//punto4

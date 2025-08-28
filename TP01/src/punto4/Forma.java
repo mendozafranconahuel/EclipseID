@@ -1,7 +1,7 @@
 package punto4;
 
 public abstract class Forma { 
-	protected String nombreForma;
+	public String nombreForma;
 
 //	CONSTRUCTORES
 	

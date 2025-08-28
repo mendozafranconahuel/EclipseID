@@ -1,5 +1,4 @@
 package punto5;
-import metodos.Metodo;
 import punto4.Forma;
 
 public class Circulo extends Forma {

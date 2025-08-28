@@ -7,15 +7,8 @@ OperacionesComunes   con   3   atributos   y
 
 */
 
-public class OperacionesComunes {
-	protected String nombreServicio;
-	protected double pago;
-	
-	public void pagarServicio() {
-		
-	}
-	
-	public void cambiarAlias() {
-		
-	}
+public interface OperacionesComunes {
+
+
+
 }
