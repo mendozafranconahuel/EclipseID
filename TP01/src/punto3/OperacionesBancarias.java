@@ -1,5 +1,5 @@
 package punto3;
 
-public interface OperacionesBancarias implements OperacionesComunes {
+public interface OperacionesBancarias extends OperacionesComunes {
 	
 }
