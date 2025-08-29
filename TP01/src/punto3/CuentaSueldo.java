@@ -1,8 +1,8 @@
-package punto2;
+package punto3;
 import punto1.CuentaBancaria;
 import metodos.Metodo;
 
-public class CuentaSueldo extends CuentaBancaria{ //HIJO
+public class CuentaSueldo extends CuentaBancaria implements OperacionesBancarias{ //HIJO
 	 int legajo = 0;
 	 String institucion, beneficios;
 	 long cbu;
@@ -85,6 +85,14 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 		 this.tope = tope;
 	 }
 	 
+// -------------------------------------------------------------------------------------------------//
+	@Override
+	public void pagarServicio() {
+	}
+
+	@Override
+	public void cambiarAlias() {
+	}
 // -------------------------------------------------------------------------------------------------//
 
 	public void mostrarSueldo() { //CORREGIR EL PORQUE

@@ -1,9 +1,10 @@
-package punto4;
-import metodos.Metodo;
+package punto6;
 
-public class Punto4 {
+import metodos.Metodo;
+import punto4.Cuadrilatero;
+
+public class Punto6 {
 	public static void main (String [] arg) {
-		//Cuadrilatero c = new Cuadrilatero("uno",5,6);
 		Cuadrilatero c = null;
 		double l1 = 0, l2 = 0;
 		
@@ -22,4 +23,4 @@ public class Punto4 {
 	System.out.println("- AREA: "+c.area());
 	System.out.println("- PERIMETRO: "+c.perimetro());
 	}
-}//punto4
+}

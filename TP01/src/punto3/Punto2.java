@@ -1,4 +1,4 @@
-package punto2;
+package punto3;
 import metodos.Metodo;
 
 public class Punto2 {

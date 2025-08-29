@@ -13,7 +13,7 @@ public class Metodo {
                 String entrada = s.nextLine();
                 return Integer.parseInt(entrada);
             } catch (NumberFormatException e) {
-                System.out.println(" - ERROR: Ingrese un número entero válido.");
+                System.out.print(" - ERROR: Ingrese un número entero válido.");
             }
         }
     }
@@ -43,6 +43,21 @@ public class Metodo {
             }
         }
     }
+  //-------------------------------------------------------------------------------------------
+
+    public static double pedirDoublePositivo(String mensaje) {
+    double numero;
+    	while (true) {
+            numero = pedirDouble(mensaje);
+            try {
+                if (numero>0.01) {
+                	   return numero;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println(" - ERROR: Ingrese un número con decimales válido.");
+            }
+        }
+   }
 //----------------------------------------------------------------------------------------------------
     public static float pedirFloat(String mensaje) {
         while (true) {
@@ -93,6 +108,7 @@ public static int validarLong(long numero) {
 return texto.length();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
+
 public static double dimencion(String mensaje , double mayor) {
     double numero;
     while (true) {
@@ -101,18 +117,29 @@ public static double dimencion(String mensaje , double mayor) {
         	return numero;
         }
         else {
-        	System.out.println("INGRESE UN NUMERO MAYOR A"+mayor+"\n");
+        	System.out.println("INGRESE UN NUMERO MAYOR A "+mayor+"\n");
         }
     }
 }
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////	
-///////////////////////////////////////////////////////////////////////////////////////////////////	
-///////////////////////////////////////////////////////////////////////////////////////////////////	
-///////////////////////////////////////////////////////////////////////////////////////////////////	
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
 
+public static int validarOpcion(int limite) {
+    int numero;
+	while (true) {
+        numero = pedirEntero("\t\t> OPCION: ");
+            if (numero >= 1 && numero <= limite) {
+            	return numero;
+            }
+            else {
+            System.out.println(" -->  OPCION NO VALIDA");
+            }
+    }
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////	
+///////////////////////////////////////////////////////////////////////////////////////////////////	
+///////////////////////////////////////////////////////////////////////////////////////////////////	
+///////////////////////////////////////////////////////////////////////////////////////////////////	
+///////////////////////////////////////////////////////////////////////////////////////////////////	
 
 }//end metodo
