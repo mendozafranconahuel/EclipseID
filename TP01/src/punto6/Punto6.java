@@ -5,7 +5,6 @@ import punto4.Cuadrilatero;
 
 public class Punto6 {
 	public static void main (String [] arg) {
-		//Cuadrilatero c = new Cuadrilatero("uno",5,6);
 		Cuadrilatero c = null;
 		double l1 = 0, l2 = 0;
 		
