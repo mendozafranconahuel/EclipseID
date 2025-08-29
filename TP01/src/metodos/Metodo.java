@@ -117,7 +117,7 @@ public static double dimencion(String mensaje , double mayor) {
         	return numero;
         }
         else {
-        	System.out.println("INGRESE UN NUMERO MAYOR A"+mayor+"\n");
+        	System.out.println("INGRESE UN NUMERO MAYOR A "+mayor+"\n");
         }
     }
 }
@@ -126,7 +126,7 @@ public static double dimencion(String mensaje , double mayor) {
 public static int validarOpcion(int limite) {
     int numero;
 	while (true) {
-        numero = pedirEntero("\t >OPCION: ");
+        numero = pedirEntero("\t\t> OPCION: ");
             if (numero >= 1 && numero <= limite) {
             	return numero;
             }

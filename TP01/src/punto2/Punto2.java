@@ -4,7 +4,7 @@ import metodos.Metodo;
 public class Punto2 {
 	public static int menu(){
 		int opcion = 0;
-		System.out.println("\n\n\t -- MENU PUNTO 1 --");
+		System.out.println("\n\n\t -- MENU PUNTO 2 --");
 		System.out.println("\t 1. MOSTRAR CUENTA.");
 		System.out.println("\t 2. RETIRAR.");
 		System.out.println("\t 3. TRANSFERIR CBU.");
@@ -44,13 +44,13 @@ public class Punto2 {
 					
 				case 3: System.out.println("\n - TRANSFERIR DINERO POR CBU");
 						double montoT = Metodo.pedirDouble(" > MONTO: ");
-						long cbuT = Metodo.pedirLong("> INGRESE CBU");
+						long cbuT = Metodo.pedirLong(" > INGRESE CBU: ");
 							cliente.trasferir(montoT, cbuT);
 					break;
 					
 				case 4: System.out.println("\n - TRANSFERIR DINERO POR CBU");
 						double montoA = Metodo.pedirDouble(" > MONTO: ");
-						String alias = Metodo.cadena("> ALIAS: ");
+						String alias = Metodo.cadena(" > ALIAS: ");
 							cliente.trasferir(montoA, alias);
 					break;
 			}

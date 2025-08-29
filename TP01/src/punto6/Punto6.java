@@ -17,7 +17,7 @@ public class Punto6 {
 				c = new Cuadrilatero ("Cuadrado",l1,l2);
 			}
 			else{
-				c = new Cuadrilatero ("Resctangulo",l1,l2);	
+				c = new Cuadrilatero ("Rectangulo",l1,l2);	
 			}
 		}
 	System.out.println("\n\n- NOMBRE: "+c.nombreForma);

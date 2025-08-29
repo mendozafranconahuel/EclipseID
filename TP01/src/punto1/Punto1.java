@@ -4,7 +4,7 @@ public class Punto1 {
 	
 	public static int menu(){
 		int opcion = 0;
-		System.out.println("\n\n\t -- MENU PUNTO 1 --");
+		System.out.println("\n\t -- MENU PUNTO 1 --");
 		System.out.println("\t 1. MOSTRAR CUENTA.");
 		System.out.println("\t 2. ACTUALIZAR SALDO.");
 		System.out.println("\t 3. INGRESAR .");
@@ -42,6 +42,6 @@ public class Punto1 {
 					break;
 			}
 		}
-	System.out.println("A FINALIZADO EL PROGRAMA.");
+	System.out.println("\nA FINALIZADO EL PROGRAMA.");
 	}
 }

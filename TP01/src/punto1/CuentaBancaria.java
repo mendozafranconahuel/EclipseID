@@ -47,10 +47,8 @@ public class CuentaBancaria {
 
 	public void retirar(double extraer) {
 		if (this.saldo > 0){
-			//double extraer = pedir.pedirDouble("> INGRESE EL MONTO A EXTRAER: ");
-			extraer = Metodo.redondear(extraer, 2);
 			if (extraer <= this.saldo ) {
-				this.saldo = this.saldo - extraer;
+				this.saldo = Metodo.redondear(this.saldo - extraer, 2); 
 				mostrarCuenta();
 			}
 			else {System.out.println("- NO ES POSIBLE EXTRAER MAS QUE SU SALDO DE NUM CUENTA: "+this.numCuenta+".");}
@@ -60,10 +58,10 @@ public class CuentaBancaria {
 // Método que nos permita mostrar todos los datos de la cuenta.
 	
 	public void mostrarCuenta() {
-		System.out.println("> NUM. CUENTA:"+numCuenta);
-		System.out.println("- DNI: "+dni);
-		System.out.println("- SALDO: "+saldo);
-		System.out.println("- INTERES: "+interes+"\n");
+		System.out.println("\t> NUM. CUENTA:"+numCuenta);
+		System.out.println("\t- DNI: "+dni);
+		System.out.println("\t- SALDO: "+saldo);
+		System.out.println("\t- INTERES: "+interes+"\n\n");
 	}
 	
 ////////////////////////////////////////////////////////////////////////////	

@@ -130,7 +130,7 @@ public class CuentaSueldo extends CuentaBancaria{ //HIJO
 		if(this.saldo >= monto) {
 			this.saldo = saldo - monto;
 			System.out.println("\n- TRASFERENCIA HECHA DE: $"+monto+" A "+alias);
-			System.out.println("\n- SALDO ACTUAL:"+this.saldo);
+			System.out.println("- SALDO ACTUAL:"+this.saldo);
 		}
 		else {System.out.println(" NO ES POSIBLE REALIZAR LA TRANSFERENCIA");}
 	}
