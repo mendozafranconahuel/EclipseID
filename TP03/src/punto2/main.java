@@ -10,7 +10,8 @@ public class main {
         hilo1.start();
         hilo2.start();
         
-        
+        //muestra en consola cómo un hilo incrementa 100 veces el objeto contador
+        //y luego otro hilo lo incrementa de nuevo 100 veces. No se intercalan
        
     }
 }
