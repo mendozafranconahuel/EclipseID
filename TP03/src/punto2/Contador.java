@@ -24,5 +24,4 @@ public class Contador {
 	public static void setContador(int contador) {
 		Contador.contador = contador;
 	}
-    
 }   
