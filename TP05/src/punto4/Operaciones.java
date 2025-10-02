@@ -17,7 +17,7 @@ public class Operaciones {
 		int[][] matrizGenerada = new int[fila][columna];
 		for (int i = 0; i < fila; i++) {
 			for (int j = 0; j < columna; j++) {
-				matrizGenerada[i][j] = random.nextInt(100);
+				matrizGenerada[i][j] = random.nextInt(11) + 5;
 			}
 		}
 		return matrizGenerada;
