@@ -14,27 +14,27 @@ public class Main {
 
         List<Thread> started = new ArrayList<>();
 
-        int comenzarProductor = 0;
-        int comenzarConsumidor = 0;
+        int productoresIniciados = 0;
+        int consumidoresIniciados = 0;
 
         // Lanzamiento aleatorio con intervalos 100 - 200 ms
-        while (comenzarProductor < N_PRODUCTOR || comenzarConsumidor < N_CONSUMIDOR) {
+        while (productoresIniciados < N_PRODUCTOR || consumidoresIniciados < N_CONSUMIDOR) {
             boolean launchProducer;
-            if (comenzarProductor >= N_PRODUCTOR) {
+            if (productoresIniciados >= N_PRODUCTOR) {
                 launchProducer = false;
-            } else if (comenzarConsumidor >= N_CONSUMIDOR) {
+            } else if (consumidoresIniciados >= N_CONSUMIDOR) {
                 launchProducer = true;
             } else {
                 launchProducer = rnd.nextBoolean();
             }
 
             if (launchProducer) {
-                Productor p = new Productor(++comenzarProductor, buffer);
+                Productor p = new Productor(++productoresIniciados, buffer);
                 p.start();
                 started.add(p);
                 System.out.println("Lanzado " + p.getName());
             } else {
-                Consumidor c = new Consumidor(++comenzarConsumidor, buffer);
+                Consumidor c = new Consumidor(++consumidoresIniciados, buffer);
                 c.start();
                 started.add(c);
                 System.out.println("Lanzado " + c.getName());
