@@ -1,11 +1,9 @@
-package punto2;
+package punto3;
 public class Contador {
 	private int contador;
-	private String tipo;
 	
-	public Contador(String tipo) {
+	public Contador() {
 		this.contador = 100;
-		this.tipo = tipo;
 	}
 	
 	public synchronized void incrementar() {
@@ -26,21 +24,12 @@ public class Contador {
 		this.contador = contador;
 	}
 	
-	public void run(){
-		for (int i = 1; i <= 100; i++) {
-			if (tipo.equalsIgnoreCase("incrementar"))	incrementar();
-			else	decrementar();
+	public void run() {
+		for (int i = 0; i < 100; i++) {
+			incrementar();
+			decrementar();
 		}
 	}
-
-	public void start() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void join() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 }//Contador

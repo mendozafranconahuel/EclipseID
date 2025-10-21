@@ -1,30 +1,27 @@
 package punto3;
-import punto2.Contador;
-import punto2.Colorear;
-import java.util.Random;
+import metodos.Colorear;
+import metodos.Metodo;
 
 public class HiloDecrementador extends Thread {
-    private Contador contador;
-    private Random random;
-
-    public HiloDecrementador(Contador contador) {
-        this.contador = contador;
-        this.random = new Random();
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 100; i++) {
-            contador.decrementar();
-            String mensaje = " > Hilo Decrementador - Contador: "+contador.getContador();
-            System.out.println(Colorear.rojo(mensaje));
-            
-            try {
-                // Retardo aleatorio entre 50-150ms
-                Thread.sleep(random.nextInt(101) + 50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();  
-            }
-        }
-    }
+	private Contador contador;
+	
+	public HiloDecrementador(Contador contador) {
+		this.contador = contador;
+	}
+	
+	@Override
+	public void run() {
+		for (int i = 0; i < 100; i++) {
+			contador.decrementar();
+			int retardo = Metodo.generarEntero(50, 150);
+			
+			Colorear.rojo(" > Hilo Decrementador - Contador: "+contador.getContador());
+			
+			try {
+				Thread.sleep(retardo);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

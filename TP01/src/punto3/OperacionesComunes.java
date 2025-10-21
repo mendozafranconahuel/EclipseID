@@ -1,36 +1,13 @@
 package punto3;
-/*
-Cree   una   interfaz   llamada   
-OperacionesComunes   con   3   atributos   y   
-
-2   métodos (pagarServicio() y cambiarAlias()). 
-
-*/
 
 public interface OperacionesComunes {
-	float saldo;
-	String monto;
-	String alias;
-	String servicio
+	// Atributos en interfaces son implícitamente public static final (constantes)
+	double saldo = 0.0; 
+	String alias = "alias_default";
+	String banco = "Banco Global";
 	
-	public void pagarServicio(String servicio, float monto) {
-		if (monto > 0 && monto <= saldo) {
-			saldo -= monto;
-			pago = servicio;
-			System.out.println("Pago de " + servicio + " por un monto de " + monto + " realizado con éxito.");
-		} 
-		else {
-			System.out.println("Saldo insuficiente o monto inválido.");
-		}
-	}//pagarServicio
+	// Los métodos deben ser abstractos (sin cuerpo) por defecto.
+	void pagarServicio(String servicio, double monto);
 	
-	public void cambiarAlias(String nuevoAlias) {
-		if (nuevoAlias != null && !nuevoAlias.isEmpty()) {
-			alias = nuevoAlias;
-			System.out.println("Alias cambiado a: " + alias);
-		} 
-		else {
-			System.out.println("Alias inválido.");
-		}
-	}//cambiarAlias
+	void cambiarAlias(String nuevoAlias);
 }

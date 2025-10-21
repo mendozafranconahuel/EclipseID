@@ -1,4 +1,4 @@
-package punto2;
+package metodos;
 
 public class Colorear {
     public static final String RESET = "\u001B[0m";

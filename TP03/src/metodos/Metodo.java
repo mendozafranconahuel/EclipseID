@@ -2,6 +2,7 @@ package metodos;
 import java.util.Scanner;
 import java.math.BigDecimal;//funciones
 import java.math.RoundingMode;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Metodo {
 	static Scanner s = new Scanner(System.in);
@@ -71,11 +72,45 @@ public class Metodo {
         }
     }
 //----------------------------------------------------------------------------------------------------
-public static String cadena(String mensaje) {
-        System.out.print(mensaje);
-        return s.nextLine();
+public static String pedirCadena(String mensaje) {
+	System.out.print(mensaje);
+return s.nextLine();
 }
+//-------------------------------------------------------------------------------------------
+
+
 //----------------------------------------------------------------------------------------------------
+public static String todoMatuscaulas(String cadena) {
+	if (cadena == null) {
+        return null;
+    }
+return cadena.toUpperCase();
+}
+//-------------------------------------------------------------------------------------------
+
+public static String todoMinusculas(String cadena) {
+	if (cadena == null) {
+        return null;
+    }
+return cadena.toLowerCase();
+}
+//-------------------------------------------------------------------------------------------
+public static String descomponerCadena(String cadena){
+	if (cadena == null || cadena.isEmpty()) {
+        System.out.println(" - LA CADENA ESTA VACIA.");
+    }``````` 
+	else {
+		String [] texto = new String[cadena.length()];
+		char[] caracteres = cadena.toCharArray();	//Transformar la cadena en un arreglo de caracteres
+		
+		for (int i = 0; i < caracteres.length; i++) {
+			texto[i] = String.valueOf(caracteres[i]);
+		}
+		
+	}
+return cadena;
+}
+//-------------------------------------------------------------------------------------------
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
@@ -135,8 +170,16 @@ public static int validarOpcion(int limite) {
             }
     }
 }
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
+
+public static long generarLong(long minimo, long maximo) {
+    return ThreadLocalRandom.current().nextLong(minimo, maximo + 1);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////	
+
+public static int generarEntero(int minimo, int maximo) {
+    return ThreadLocalRandom.current().nextInt(minimo, maximo + 1);
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
 ///////////////////////////////////////////////////////////////////////////////////////////////////	
