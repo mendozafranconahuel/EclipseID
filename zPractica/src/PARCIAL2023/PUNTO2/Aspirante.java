@@ -9,15 +9,13 @@ public class Aspirante extends Thread {
     private int id;
     private Semaphore pista1;
     private Semaphore pista2;
-    private Pasillo pasillo;
     private int tiempo1;
     private int tiempo2;
 
-    public Aspirante(int id, Semaphore pista1, Semaphore pista2, Pasillo pasillo) {
+    public Aspirante(int id, Semaphore pista1, Semaphore pista2) {
         this.id = id;
         this.pista1 = pista1;
         this.pista2 = pista2;
-        this.pasillo = pasillo;
         this.tiempo1 = Metodo.generarEntero(1100, 1300); // 1100–1300ms
         this.tiempo2 = Metodo.generarEntero(600, 800);;  // 600–800ms
     }
@@ -26,15 +24,15 @@ public class Aspirante extends Thread {
     public void run() {
         try {
             // Espera turno para pista 1
-            pista1.acquire();
-            Colorear.verde("   * Aspirante"+id+": INGRESA A PISTA 1.");
+            pista1.acquire();	// Solicita permiso para entrar a pista 1
+            Colorear.verde("   * Aspirante "+id+": INGRESA A PISTA 1 ("+pista1.availablePermits()+" LUGARES DISPONIBLES).");
             	Thread.sleep(tiempo1);
             Colorear.rojo("\t Aspirante"+id+": SALE DE PISTA 1.");
-            pista1.release();
+            pista1.release();	// Libera permiso al salir de pista 1
 
-            // Entra al pasillo
-            pasillo.esperar(id);
-
+            // Entra al pasillo - EN ESPERA HASTA QUE PUEDA INGRESAR A PISTA 2
+            Colorear.cyan("\t\t -- Aspirante "+id+": INGRESA al PASILLO.");
+            	
             // Espera turno para pista 2
             pista2.acquire();
             Colorear.azul("        ** Aspirante "+id+" INGRESA A PISTA 2.");

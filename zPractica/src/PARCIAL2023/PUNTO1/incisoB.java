@@ -23,8 +23,8 @@ public class incisoB {
 	public static void main(String[] args) {
 		int repeticiones = Metodo.pedirEntero("\n > CANTIDAD DE REPETICIONES: ");
 		
-        Semaphore semA = new Semaphore(1); // A comienza
-        Semaphore semB = new Semaphore(0);
+        Semaphore semA = new Semaphore(0); // A comienza
+        Semaphore semB = new Semaphore(1);
         Semaphore semC = new Semaphore(0);
 		
 		Proceso procesoA = new Proceso("A", repeticiones, semA, semB);

@@ -42,17 +42,12 @@ public class Principal {
 
         Semaphore pista1 = new Semaphore(20);
         Semaphore pista2 = new Semaphore(10);
-        Pasillo pasillo = new Pasillo();
         
         System.out.println("\n INGRESO AL RECINTO: ");
+        
         for (int i = 1; i <= numAspirantes; i++) {
-            Aspirante aspirante = new Aspirante(i, pista1, pista2, pasillo);
+            Aspirante aspirante = new Aspirante(i, pista1, pista2);
             aspirante.start();
-        }
-        try {
-        	//aspirante.join();
-        }catch (Exception e) {
-			e.printStackTrace();
         }
     }
 }
